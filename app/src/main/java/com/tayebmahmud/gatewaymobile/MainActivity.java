@@ -8,6 +8,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.tayebmahmud.mobile.SendSmsVerify;
+
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,5 +24,23 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        //send sms
+        HashMap<String, String> map = new HashMap<>();
+        map.put("phone", "PHONE_NUMBER");
+        map.put("phone", "PHONE_NUMBER");
+        map.put("phone", "PHONE_NUMBER");
+        map.put("phone", "PHONE_NUMBER");
+        map.put("phone", "PHONE_NUMBER");
+        //etc...
+        SendSmsVerify sms = new SendSmsVerify(this, "API_KEY", map, "URl");
+        sms.sendSMS(success -> {
+            if (success){
+                //successfully
+            } else {
+                //unSuccessfully
+            }
+        });
+
     }
 }
