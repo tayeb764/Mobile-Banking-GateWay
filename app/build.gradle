@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.tayebmahmud.gatewaymobile"
-        minSdk 24
+        minSdk 21
         //noinspection EditedTargetSdkVersion
         targetSdk 35
         versionCode 1
